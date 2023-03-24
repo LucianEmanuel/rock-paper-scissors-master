@@ -11,6 +11,7 @@ const imgContainer = document.querySelector('.img-wrapper');
 const result = document.querySelector('.result');
 const scoreBoard = document.querySelector('.score');
 const rules = document.querySelector('.rules');
+const logo = document.querySelector('.img-logo');
 
 let player = undefined;
 let house = undefined;
@@ -28,6 +29,7 @@ function chooseGame(e) {
   if (e.currentTarget.classList.contains('advanced-game')) {
     data = data2;
     scoreBoard.textContent = score2;
+    logo.src = 'images/logo-bonus.svg';
     rules.src = 'images/image-rules-bonus.svg';
     delayHidden(startModal);
     imgContainer.classList.add('advanced');
